@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Web1Page() {
   const [currentPage, setCurrentPage] = useState<string>('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   const renderHome = () => (
     <>
@@ -402,6 +403,13 @@ export default function Web1Page() {
           <i className="fas fa-cube text-indigo-600 text-2xl"></i>
           <span className="text-xl font-semibold">InnovateTech</span>
         </div>
+        
+        {/* 移动端菜单按钮 */}
+        <button className="md:hidden text-gray-600" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
+        </button>
+
+        {/* 桌面端导航 */}
         <div className="hidden md:flex items-center gap-8">
           <a
             href="#"
@@ -447,6 +455,62 @@ export default function Web1Page() {
             Get Started
           </button>
         </div>
+
+
+        {/* 移动端菜单 */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-20 left-0 w-full bg-white border-b md:hidden">
+            <div className="flex flex-col p-4">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentPage('about');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`${currentPage === 'about' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+              >
+                About Us
+              </a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentPage('story');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`${currentPage === 'story' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+              >
+                Our Story
+              </a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentPage('team');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`${currentPage === 'team' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+              >
+                Team
+              </a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentPage('partners');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`${currentPage === 'partners' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+              >
+                Partners
+              </a>
+              <button className="bg-indigo-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-700 mt-4">
+                Get Started
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
