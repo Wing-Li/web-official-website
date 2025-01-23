@@ -337,7 +337,7 @@ export default function App() {
       </div>
       {/* Timeline Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 text-black">
           <div className="space-y-24">
             {[
               {
