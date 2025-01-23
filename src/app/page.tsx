@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image";
 
@@ -9,6 +9,10 @@ const tgChannelUrl = "";
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   function gotoNBBIT() {
     window.location.href = "https://nbbit.com";
