@@ -28,7 +28,7 @@ export default function Web1Page() {
               e.preventDefault();
               setCurrentPage('about');
             }}
-            className={`${currentPage === 'about' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600`}
+            className={`${currentPage === 'about' ? 'text-indigo-600 font-semibold' : 'text-gray-600'} hover:text-indigo-600`}
           >
             About Us
           </a>
@@ -38,7 +38,7 @@ export default function Web1Page() {
               e.preventDefault();
               setCurrentPage('story');
             }}
-            className={`${currentPage === 'story' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600`}
+            className={`${currentPage === 'story' ? 'text-indigo-600 font-semibold' : 'text-gray-600'} hover:text-indigo-600`}
           >
             Our Story
           </a>
@@ -48,7 +48,7 @@ export default function Web1Page() {
               e.preventDefault();
               setCurrentPage('team');
             }}
-            className={`${currentPage === 'team' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600`}
+            className={`${currentPage === 'team' ? 'text-indigo-600 font-semibold' : 'text-gray-600'} hover:text-indigo-600`}
           >
             Team
           </a>
@@ -58,7 +58,7 @@ export default function Web1Page() {
               e.preventDefault();
               setCurrentPage('partners');
             }}
-            className={`${currentPage === 'partners' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600`}
+            className={`${currentPage === 'partners' ? 'text-indigo-600 font-semibold' : 'text-gray-600'} hover:text-indigo-600`}
           >
             Partners
           </a>
@@ -70,7 +70,7 @@ export default function Web1Page() {
 
         {/* 移动端菜单 */}
         {isMobileMenuOpen && (
-          <div className="absolute top-20 left-0 w-full bg-white border-b md:hidden">
+          <div className="absolute top-20 left-0 w-full bg-white/90 border-b md:hidden">
             <div className="flex flex-col p-4">
               <a
                 href="#"
@@ -79,7 +79,7 @@ export default function Web1Page() {
                   setCurrentPage('about');
                   setIsMobileMenuOpen(false);
                 }}
-                className={`${currentPage === 'about' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+                className={`${currentPage === 'about' ? 'text-indigo-600 font-semibold' : 'text-gray-900'} hover:text-indigo-600 py-2`}
               >
                 About Us
               </a>
@@ -90,7 +90,7 @@ export default function Web1Page() {
                   setCurrentPage('story');
                   setIsMobileMenuOpen(false);
                 }}
-                className={`${currentPage === 'story' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+                className={`${currentPage === 'story' ? 'text-indigo-600 font-semibold' : 'text-gray-900'} hover:text-indigo-600 py-2`}
               >
                 Our Story
               </a>
@@ -101,7 +101,7 @@ export default function Web1Page() {
                   setCurrentPage('team');
                   setIsMobileMenuOpen(false);
                 }}
-                className={`${currentPage === 'team' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+                className={`${currentPage === 'team' ? 'text-indigo-600 font-semibold' : 'text-gray-900'} hover:text-indigo-600 py-2`}
               >
                 Team
               </a>
@@ -112,7 +112,7 @@ export default function Web1Page() {
                   setCurrentPage('partners');
                   setIsMobileMenuOpen(false);
                 }}
-                className={`${currentPage === 'partners' ? 'text-indigo-600' : 'text-gray-600'} hover:text-indigo-600 py-2`}
+                className={`${currentPage === 'partners' ? 'text-indigo-600 font-semibold' : 'text-gray-900'} hover:text-indigo-600 py-2`}
               >
                 Partners
               </a>
