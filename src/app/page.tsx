@@ -19,8 +19,8 @@ export default function App() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
-          <i className="fas fa-cube text-indigo-600 text-2xl"></i>
-          <span className="text-xl font-semibold">InnovateTech</span>
+          <Image src="/imgs/logo.jpg" alt="" width={28} height={28}/>
+          <span className="text-xl font-semibold">NBBIT</span>
         </div>
 
         {/* 移动端菜单按钮 */}
