@@ -34,6 +34,16 @@ export default function App() {
             href="#"
             onClick={(e) => {
               e.preventDefault();
+              setCurrentPage('home');
+            }}
+            className={`${currentPage === 'home' ? 'text-indigo-600 font-semibold' : 'text-gray-600'} hover:text-indigo-600`}
+          >
+            Home
+          </a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
               setCurrentPage('about');
             }}
             className={`${currentPage === 'about' ? 'text-indigo-600 font-semibold' : 'text-gray-600'} hover:text-indigo-600`}
@@ -70,6 +80,17 @@ export default function App() {
         {isMobileMenuOpen && (
           <div className="absolute top-20 left-0 w-full bg-white/90 border-b md:hidden">
             <div className="flex flex-col p-4">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentPage('home');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`${currentPage === 'home' ? 'text-indigo-600 font-semibold' : 'text-gray-900'} hover:text-indigo-600 py-2`}
+              >
+                Home
+              </a>
               <a
                 href="#"
                 onClick={(e) => {
@@ -173,7 +194,7 @@ export default function App() {
                 // 小火箭图标
                 icon: "fas fa-rocket",
                 title: "Seamless Experience",
-                desc: "Enjoy a.tsx user-friendly platform designed for traders of all levels."
+                desc: "Enjoy a user-friendly platform designed for traders of all levels."
               },
               {
                 // 闪电图标
@@ -477,7 +498,7 @@ export default function App() {
     <>
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-row justify-evenly items-start gap-8 mb-12">
+          <div className="flex flex-row justify-between items-start gap-8 mb-12 px-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <Image src="/imgs/logo.jpg" alt="" width={28} height={28}/>
