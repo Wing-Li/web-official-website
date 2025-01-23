@@ -119,7 +119,7 @@ export default function App() {
       {/* Hero Section */}
       <div className="relative h-[600px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/32a4245faf3575510f7827df8576e48c.jpg')`
+          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/e66f19e3dcc93ff2dc08019551a212dd.jpg')`
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/90 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -173,7 +173,7 @@ export default function App() {
                 // 小火箭图标
                 icon: "fas fa-rocket",
                 title: "Seamless Experience",
-                desc: "Enjoy a user-friendly platform designed for traders of all levels."
+                desc: "Enjoy a.tsx user-friendly platform designed for traders of all levels."
               },
               {
                 // 闪电图标
@@ -238,7 +238,7 @@ export default function App() {
       {/* About Hero Section */}
       <div className="relative h-[500px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/d50d081fbb8b8f805ff296cd0829e92c.jpg')`
+          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/24099f7a3ab3d2cdc798dd98208c5c96.jpg')`
         }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -320,10 +320,10 @@ export default function App() {
 
   const renderFeatures = () => (
     <>
-      {/* Features Section */}
+      {/* Story Hero Section */}
       <div className="relative h-[500px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/b7a0b3ad4f9d80f16a11a78af9f5c12b.jpg')`
+          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/05f37cb551a697646d89aac7d700ef52.jpg')`
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -337,32 +337,32 @@ export default function App() {
       </div>
       {/* Timeline Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 text-black">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="space-y-24">
             {[
               {
-                year: "2010",
+                year: "Strategy Following",
                 title: "Strategy Following",
                 description: "Copy the trades of top-performing traders with a single click, and instantly replicate their successful strategies.",
-                image: "https://ai-public.mastergo.com/ai/img_res/16fcab6f7effed126ffd3267d40b0db6.jpg"
+                image: "https://ai-public.mastergo.com/ai/img_res/45ea116fdcbfd8d263fdb223e71b0e2f.jpg"
               },
               {
-                year: "2015",
+                year: "Trading Signals",
                 title: "Trading Signals",
                 description: "Receive real-time trading signals with high success rates, delivered directly to your dashboard for easy access.",
-                image: "https://ai-public.mastergo.com/ai/img_res/498858e2c945fead7ecae464713a6937.jpg"
+                image: "https://ai-public.mastergo.com/ai/img_res/137656da3fd1553b1f8b59e9cee9462c.jpg"
               },
               {
-                year: "2018",
+                year: "Expert Guidance",
                 title: "Expert Guidance",
                 description: "Get personalized professional insights and expert advice to make more informed and confident trading decisions.",
-                image: "https://ai-public.mastergo.com/ai/img_res/c24bb06c0449c9fec4527809cb42eaa9.jpg"
+                image: "https://ai-public.mastergo.com/ai/img_res/9eb9e5ecc250f9a9abef5ca6ca80a70f.jpg"
               },
               {
-                year: "2024",
+                year: "Referral Program",
                 title: "Referral Program",
-                description: "Invite friends to join, and earn generous commissions every time they trade on the platform.",
-                image: "https://ai-public.mastergo.com/ai/img_res/df207f562a6a8c3da2f917c49656195f.jpg"
+                description: "Invite friends to join our trading platform and earn rewards through our comprehensive referral program.",
+                image: "https://ai-public.mastergo.com/ai/img_res/c479e5f4e55a3c406d25056a069a3b63.jpg"
               }
             ].map((milestone, index) => (
               <div key={index} className={`flex items-center gap-16 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
@@ -430,13 +430,13 @@ export default function App() {
               {
                 "name": "Emily Johnson",
                 "role": "Crypto & HFT Expert",
-                "bio": "A high-frequency trading specialist who combines algorithmic strategies with a deep understanding of cryptocurrency markets.",
+                "bio": "A high-frequency trading specialist who combines algorithmic strategies with a.tsx deep understanding of cryptocurrency markets.",
                 "image": "/imgs/icon_emily_johnson.png"
               },
               {
                 "name": "David Miller",
                 "role": "Options & Futures Trading Expert",
-                "bio": "Highly skilled in advanced options and futures strategies, with a focus on risk management, market volatility, and long-term profitability.",
+                "bio": "Highly skilled in advanced options and futures strategies, with a.tsx focus on risk management, market volatility, and long-term profitability.",
                 "image": "/imgs/icon_david_miller.jpg"
               },
               {
@@ -490,12 +490,12 @@ export default function App() {
                 <a href={tgChannelUrl} className="text-gray-400 hover:text-white">
                   <i className="fab fa-telegram text-xl"></i>
                 </a>
-                {/*<a href="#" className="text-gray-400 hover:text-white">*/}
+                {/*<a.tsx href="#" className="text-gray-400 hover:text-white">*/}
                 {/*  <i className="fab fa-linkedin text-xl"></i>*/}
-                {/*</a>*/}
-                {/*<a href="#" className="text-gray-400 hover:text-white">*/}
+                {/*</a.tsx>*/}
+                {/*<a.tsx href="#" className="text-gray-400 hover:text-white">*/}
                 {/*  <i className="fab fa-github text-xl"></i>*/}
-                {/*</a>*/}
+                {/*</a.tsx>*/}
               </div>
             </div>
             <div>
@@ -536,10 +536,10 @@ export default function App() {
             {/*<div>*/}
             {/*  <h3 className="text-lg font-semibold mb-4">Resources</h3>*/}
             {/*  <ul className="space-y-3">*/}
-            {/*    <li><a href="#" className="text-gray-400 hover:text-white">Documentation</a></li>*/}
-            {/*    <li><a href="#" className="text-gray-400 hover:text-white">Help Center</a></li>*/}
-            {/*    <li><a href="#" className="text-gray-400 hover:text-white">Privacy</a></li>*/}
-            {/*    <li><a href="#" className="text-gray-400 hover:text-white">Terms</a></li>*/}
+            {/*    <li><a.tsx href="#" className="text-gray-400 hover:text-white">Documentation</a.tsx></li>*/}
+            {/*    <li><a.tsx href="#" className="text-gray-400 hover:text-white">Help Center</a.tsx></li>*/}
+            {/*    <li><a.tsx href="#" className="text-gray-400 hover:text-white">Privacy</a.tsx></li>*/}
+            {/*    <li><a.tsx href="#" className="text-gray-400 hover:text-white">Terms</a.tsx></li>*/}
             {/*  </ul>*/}
             {/*</div>*/}
           </div>
