@@ -1,4 +1,4 @@
-const webUrl = "https://web-official-website.pages.dev/";
+const webUrl = "https://nbbit-web.pages.dev/";
 const version = "1";
 
 export default function ImageLoader({src}) {

@@ -410,53 +410,53 @@ export default function App() {
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
-                name: "Alexander Mitchell",
-                role: "Chief Executive Officer",
-                bio: "With over 20 years of experience in technology leadership, Alex has led multiple successful startups and digital transformations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/8c46690b8c8c35a510a42de2a3b677ed.jpg"
+                "name": "John Wilson",
+                "role": "Binary Options & Forex Expert",
+                "bio": "An expert in forex and binary options trading with 10+ years of experience in technical analysis and strategic insights.",
+                "image": "/imgs/icon_john_wilson.png"
               },
               {
-                name: "Sarah Chen",
-                role: "Chief Technology Officer",
-                bio: "Former Google engineer with expertise in AI and machine learning. Led the development of our core technology platform.",
-                image: "https://ai-public.mastergo.com/ai/img_res/16c0c4409f66f26b752f5ca52205f72e.jpg"
+                "name": "Jane Smith",
+                "role": "Crypto & Binary Options Specialist",
+                "bio": "Specializes in cryptocurrency and binary options, blending blockchain knowledge with cutting-edge trading strategies.",
+                "image": "/imgs/icon_jane_smith.jpg"
               },
               {
-                name: "Marcus Thompson",
-                role: "Chief Operating Officer",
-                bio: "Brings 15 years of operational excellence from Fortune 500 companies. Expert in scaling global operations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/432ebc5d2f6aacfbdcd379732ed552fc.jpg"
+                "name": "Michael Williams",
+                "role": "Forex & Metals Trading Expert",
+                "bio": "Brings 15 years of expertise in forex and precious metals trading, leveraging macroeconomic trends and market insights.",
+                "image": "/imgs/icon_michael_williams.png"
               },
               {
-                name: "Marcus Thompson",
-                role: "Chief Operating Officer",
-                bio: "Brings 15 years of operational excellence from Fortune 500 companies. Expert in scaling global operations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/432ebc5d2f6aacfbdcd379732ed552fc.jpg"
+                "name": "Emily Johnson",
+                "role": "Crypto & HFT Expert",
+                "bio": "A high-frequency trading specialist who combines algorithmic strategies with a deep understanding of cryptocurrency markets.",
+                "image": "/imgs/icon_emily_johnson.png"
               },
               {
-                name: "Marcus Thompson",
-                role: "Chief Operating Officer",
-                bio: "Brings 15 years of operational excellence from Fortune 500 companies. Expert in scaling global operations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/432ebc5d2f6aacfbdcd379732ed552fc.jpg"
+                "name": "David Miller",
+                "role": "Options & Futures Trading Expert",
+                "bio": "Highly skilled in advanced options and futures strategies, with a focus on risk management, market volatility, and long-term profitability.",
+                "image": "/imgs/icon_david_miller.jpg"
               },
               {
-                name: "Marcus Thompson",
-                role: "Chief Operating Officer",
-                bio: "Brings 15 years of operational excellence from Fortune 500 companies. Expert in scaling global operations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/432ebc5d2f6aacfbdcd379732ed552fc.jpg"
+                "name": "Sophia Lee",
+                "role": "Cryptocurrency & Blockchain Expert",
+                "bio": "A blockchain and cryptocurrency expert specializing in tokenomics, DeFi platforms, digital asset trends, and decentralized finance strategies.",
+                "image": "/imgs/icon_sophia_lee.png"
               },
               {
-                name: "Marcus Thompson",
-                role: "Chief Operating Officer",
-                bio: "Brings 15 years of operational excellence from Fortune 500 companies. Expert in scaling global operations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/432ebc5d2f6aacfbdcd379732ed552fc.jpg"
+                "name": "Jack Turner",
+                "role": "Commodities & Precious Metals Trader",
+                "bio": "Veteran commodities trader with 18+ years of experience in precious metals and global economic market analysis.",
+                "image": "/imgs/icon_jack_turner.jpg"
               },
               {
-                name: "Marcus Thompson",
-                role: "Chief Operating Officer",
-                bio: "Brings 15 years of operational excellence from Fortune 500 companies. Expert in scaling global operations.",
-                image: "https://ai-public.mastergo.com/ai/img_res/432ebc5d2f6aacfbdcd379732ed552fc.jpg"
-              },
+                "name": "Mark Davis",
+                "role": "Equity & Stock Index Trading Expert",
+                "bio": "Equity and stock index strategist with 16 years of expertise in market timing and technical analysis for major indices.",
+                "image": "/imgs/icon_mark_davis.png"
+              }
             ].map((leader, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden">
