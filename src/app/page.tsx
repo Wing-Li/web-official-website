@@ -269,7 +269,7 @@ export default function App() {
       {/* About Hero Section */}
       <div className="relative h-[500px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('/imgs/bg_about.png')`
+          backgroundImage: `url('/imgs/bg_about.jpeg')`
         }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
