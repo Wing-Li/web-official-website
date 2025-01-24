@@ -4,7 +4,8 @@ import React, { useEffect, useState } from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image";
 
-const tgChannelUrl = "";
+const tgChannelUrl = "https://t.me/+xcBKzVF7hJthZTRi";
+const nbbitUrl = "https://nbbit.com";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
@@ -15,7 +16,7 @@ export default function App() {
   }, [currentPage]);
 
   function gotoNBBIT() {
-    window.location.href = "https://nbbit.com";
+    window.open(nbbitUrl, '_blank');
   }
 
 
@@ -74,7 +75,10 @@ export default function App() {
           >
             Team
           </a>
-          <button className="bg-indigo-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-700">
+          <button
+            className="bg-indigo-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-700"
+            onClick={gotoNBBIT}
+          >
             Get Started
           </button>
         </div>
@@ -129,7 +133,9 @@ export default function App() {
                 Team
               </a>
               <button
-                className="bg-indigo-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-700 mt-4">
+                className="bg-indigo-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-700 mt-4"
+                onClick={gotoNBBIT}
+              >
                 Get Started
               </button>
             </div>
@@ -144,7 +150,7 @@ export default function App() {
       {/* Hero Section */}
       <div className="relative h-[600px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/e66f19e3dcc93ff2dc08019551a212dd.jpg')`
+          backgroundImage: `url('/imgs/bg_home_top.jpg')`
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/90 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -263,7 +269,7 @@ export default function App() {
       {/* About Hero Section */}
       <div className="relative h-[500px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/24099f7a3ab3d2cdc798dd98208c5c96.jpg')`
+          backgroundImage: `url('/imgs/bg_about.png')`
         }}></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -348,7 +354,7 @@ export default function App() {
       {/* Story Hero Section */}
       <div className="relative h-[500px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/05f37cb551a697646d89aac7d700ef52.jpg')`
+          backgroundImage: `url('/imgs/bg_features_top.jpg')`
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -369,25 +375,25 @@ export default function App() {
                 year: "Strategy Following",
                 title: "Strategy Following",
                 description: "Copy the trades of top-performing traders with a single click, and instantly replicate their successful strategies.",
-                image: "https://ai-public.mastergo.com/ai/img_res/45ea116fdcbfd8d263fdb223e71b0e2f.jpg"
+                image: "/imgs/img_trading_strategy.png"
               },
               {
                 year: "Trading Signals",
                 title: "Trading Signals",
                 description: "Receive real-time trading signals with high success rates, delivered directly to your dashboard for easy access.",
-                image: "https://ai-public.mastergo.com/ai/img_res/137656da3fd1553b1f8b59e9cee9462c.jpg"
+                image: "/imgs/img_trading_signals.png"
               },
               {
                 year: "Expert Guidance",
                 title: "Expert Guidance",
                 description: "Get personalized professional insights and expert advice to make more informed and confident trading decisions.",
-                image: "https://ai-public.mastergo.com/ai/img_res/9eb9e5ecc250f9a9abef5ca6ca80a70f.jpg"
+                image: "/imgs/img_financial_consultant.png"
               },
               {
                 year: "Referral Program",
                 title: "Referral Program",
                 description: "Invite friends to join our trading platform and earn rewards through our comprehensive referral program.",
-                image: "https://ai-public.mastergo.com/ai/img_res/c479e5f4e55a3c406d25056a069a3b63.jpg"
+                image: "/imgs/img_friends_earning_together.png"
               }
             ].map((milestone, index) => (
               <div key={index} className={`flex items-center gap-16 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
@@ -417,7 +423,7 @@ export default function App() {
       {/* Team Hero Section */}
       <div className="relative h-[500px] mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('https://ai-public.mastergo.com/ai/img_res/2c7608d102bdf130b64f16911c2d57e6.jpg')`
+          backgroundImage: `url('/imgs/bg_business_team.png')`
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -512,8 +518,8 @@ export default function App() {
                 The Cutting-Edge Binary Options Trading Platform
               </p>
               <div className="flex gap-4">
-                <a href={tgChannelUrl} className="text-gray-400 hover:text-white">
-                  <i className="fab fa-telegram text-xl"></i>
+                <a href={tgChannelUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                  <i className="fab fa-telegram text-2xl"></i>
                 </a>
                 {/*<a.tsx href="#" className="text-gray-400 hover:text-white">*/}
                 {/*  <i className="fab fa-linkedin text-xl"></i>*/}
