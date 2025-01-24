@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image";
+import MotionUp from "@/components/animation/motion-up";
+import MotionRight from "@/components/animation/motion-right";
+import MotionLeft from "@/components/animation/motion-left";
 
 const tgChannelUrl = "https://t.me/+xcBKzVF7hJthZTRi";
 const nbbitUrl = "https://nbbit.com";
@@ -173,13 +176,15 @@ export default function App() {
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl text-black font-bold mb-4">Why Choose NBBIT?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We deliver a premier trading experience, powered by expert traders and advanced tools designed to ensure
-              your success.
-            </p>
-          </div>
+          <MotionUp>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl text-black font-bold mb-4">Why Choose NBBIT?</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                We deliver a premier trading experience, powered by expert traders and advanced tools designed to ensure
+                your success.
+              </p>
+            </div>
+          </MotionUp>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -220,20 +225,20 @@ export default function App() {
               },
 
             ].map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <MotionUp key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <i className={`${feature.icon} text-indigo-600 text-xl`}></i>
                 </div>
                 <h3 className="text-xl text-black font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </div>
+              </MotionUp>
             ))}
           </div>
         </div>
       </section>
       {/* Stats Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <MotionUp className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { number: "500+", label: "Traders Worldwide" },
@@ -247,11 +252,11 @@ export default function App() {
               </div>
             ))}
           </div>
-        </div>
+        </MotionUp>
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <MotionUp className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Ready to Start a New Trading Journey?</h2>
           <button
             className="bg-white text-indigo-600 px-8 py-3 text-lg font-medium !rounded-button whitespace-nowrap hover:bg-gray-100"
@@ -259,7 +264,7 @@ export default function App() {
           >
             Trade with NBBIT Now
           </button>
-        </div>
+        </MotionUp>
       </section>
     </>
   );
@@ -285,29 +290,31 @@ export default function App() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-black">
           <div className="grid md:grid-cols-2 gap-16">
-            <div>
+            <MotionLeft>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 At NBBIT, our mission is to empower traders worldwide with advanced tools, expert insights,
                 and real-time strategies, enabling them to make confident decisions and achieve sustainable
                 success in binary options trading.
               </p>
-            </div>
-            <div>
+            </MotionLeft>
+            <MotionRight>
               <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 We envision a future where binary options trading is accessible, innovative, and empowering,
                 setting new benchmarks for trust and performance while transforming financial opportunities
                 for traders everywhere.
               </p>
-            </div>
+            </MotionRight>
           </div>
         </div>
       </section>
       {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-black">
-          <h2 className="text-3xl font-bold text-center mb-16">Our Core Values</h2>
+          <MotionUp>
+            <h2 className="text-3xl font-bold text-center mb-16">Our Core Values</h2>
+          </MotionUp>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -335,13 +342,13 @@ export default function App() {
                 desc: "Striving to evolve in the dynamic trading landscape constantly"
               }
             ].map((value, index) => (
-              <div key={index} className="text-center p-6">
+              <MotionUp key={index} className="text-center p-6">
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className={`${value.icon} text-indigo-600 text-2xl`}></i>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.desc}</p>
-              </div>
+              </MotionUp>
             ))}
           </div>
         </div>
@@ -397,7 +404,7 @@ export default function App() {
               }
             ].map((milestone, index) => (
               <div key={index} className={`flex items-center gap-16 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
-                <div className="flex-1">
+                <MotionLeft className="flex-1">
                   <div className="relative">
                     <img src={milestone.image} alt={milestone.title}
                          className="rounded-lg shadow-lg w-full h-[400px] object-cover"/>
@@ -405,11 +412,11 @@ export default function App() {
                       {milestone.year}
                     </div>
                   </div>
-                </div>
-                <div className="flex-1">
+                </MotionLeft>
+                <MotionRight className="flex-1">
                   <h3 className="text-3xl font-bold mb-4">{milestone.title}</h3>
                   <p className="text-gray-600 text-lg leading-relaxed">{milestone.description}</p>
-                </div>
+                </MotionRight>
               </div>
             ))}
           </div>
@@ -437,7 +444,9 @@ export default function App() {
       {/* Leadership Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-black">
-          <h2 className="text-3xl font-bold text-center mb-16">Our Expert Trader Team</h2>
+          <MotionUp>
+            <h2 className="text-3xl font-bold text-center mb-16">Our Expert Trader Team</h2>
+          </MotionUp>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -489,20 +498,20 @@ export default function App() {
                 "image": "/imgs/icon_mark_davis.png"
               }
             ].map((leader, index) => (
-              <div key={index} className="text-center group relative">
+              <MotionUp key={index} className="text-center group relative">
                 <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden">
                   <img src={leader.image} alt={leader.name} className="w-full h-full object-cover"/>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{leader.name}</h3>
                 <p className="text-indigo-600 font-medium mb-4">{leader.role}</p>
                 <p className="text-gray-600">{leader.bio}</p>
-                
+
                 {/* 悬浮详情框 */}
                 <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute z-10 w-[320px] bg-white rounded-lg shadow-xl p-6 left-1/2 -translate-x-1/2 top-[200px] mt-4">
                   <div className="relative">
                     {/* 顶部小三角 */}
                     <div className="absolute -top-8 left-1/2 -translate-x-1/2 border-8 border-transparent border-b-white"></div>
-                    
+
                     <div className="flex items-start gap-4">
                       <img src={leader.image} alt={leader.name} className="w-20 h-20 rounded-full object-cover"/>
                       <div className="flex-1 text-left">
@@ -510,7 +519,7 @@ export default function App() {
                         <p className="text-indigo-600 font-medium text-sm mb-2">{leader.role}</p>
                       </div>
                     </div>
-                    
+
                     <div className="mt-4 space-y-3 text-left">
                       <p className="text-gray-600 text-sm">{leader.bio}</p>
                       <div className="border-t pt-3">
@@ -526,7 +535,7 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </MotionUp>
             ))}
           </div>
         </div>
