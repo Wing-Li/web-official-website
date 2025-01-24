@@ -489,13 +489,43 @@ export default function App() {
                 "image": "/imgs/icon_mark_davis.png"
               }
             ].map((leader, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center group relative">
                 <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden">
                   <img src={leader.image} alt={leader.name} className="w-full h-full object-cover"/>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{leader.name}</h3>
                 <p className="text-indigo-600 font-medium mb-4">{leader.role}</p>
                 <p className="text-gray-600">{leader.bio}</p>
+                
+                {/* 悬浮详情框 */}
+                <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute z-10 w-[320px] bg-white rounded-lg shadow-xl p-6 left-1/2 -translate-x-1/2 top-[200px] mt-4">
+                  <div className="relative">
+                    {/* 顶部小三角 */}
+                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 border-8 border-transparent border-b-white"></div>
+                    
+                    <div className="flex items-start gap-4">
+                      <img src={leader.image} alt={leader.name} className="w-20 h-20 rounded-full object-cover"/>
+                      <div className="flex-1 text-left">
+                        <h4 className="text-lg font-bold text-gray-900">{leader.name}</h4>
+                        <p className="text-indigo-600 font-medium text-sm mb-2">{leader.role}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-4 space-y-3 text-left">
+                      <p className="text-gray-600 text-sm">{leader.bio}</p>
+                      <div className="border-t pt-3">
+                        <h5 className="font-semibold text-gray-900 mb-2">Expertise: </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {leader.role.split('&').map((skill, idx) => (
+                            <span key={idx} className="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded">
+                              {skill.trim()}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
