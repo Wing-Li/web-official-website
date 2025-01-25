@@ -6,9 +6,8 @@ import Image from "next/image";
 import MotionUp from "@/components/animation/motion-up";
 import MotionRight from "@/components/animation/motion-right";
 import MotionLeft from "@/components/animation/motion-left";
+import Configs from "@/configs/configs";
 
-const tgChannelUrl = "https://t.me/+xcBKzVF7hJthZTRi";
-const nbbitUrl = "https://nbbit.com";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
@@ -19,7 +18,7 @@ export default function App() {
   }, [currentPage]);
 
   function gotoNBBIT() {
-    window.open(nbbitUrl, '_blank');
+    window.open(Configs.nbbitUrl, '_blank');
   }
 
 
@@ -507,10 +506,12 @@ export default function App() {
                 <p className="text-gray-600">{leader.bio}</p>
 
                 {/* 悬浮详情框 */}
-                <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute z-10 w-[320px] bg-white rounded-lg shadow-xl p-6 left-1/2 -translate-x-1/2 top-[200px] mt-4">
+                <div
+                  className="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute z-10 w-[320px] bg-white rounded-lg shadow-xl p-6 left-1/2 -translate-x-1/2 top-[200px] mt-4">
                   <div className="relative">
                     {/* 顶部小三角 */}
-                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 border-8 border-transparent border-b-white"></div>
+                    <div
+                      className="absolute -top-8 left-1/2 -translate-x-1/2 border-8 border-transparent border-b-white"></div>
 
                     <div className="flex items-start gap-4">
                       <img src={leader.image} alt={leader.name} className="w-20 h-20 rounded-full object-cover"/>
@@ -557,7 +558,8 @@ export default function App() {
                 The Cutting-Edge Binary Options Trading Platform
               </p>
               <div className="flex gap-4">
-                <a href={tgChannelUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                <a href={Configs.tgChannelUrl} target="_blank" rel="noopener noreferrer"
+                   className="text-gray-400 hover:text-white">
                   <i className="fab fa-telegram text-2xl"></i>
                 </a>
                 {/*<a.tsx href="#" className="text-gray-400 hover:text-white">*/}

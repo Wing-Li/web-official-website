@@ -1,4 +1,6 @@
-const webUrl = "https://nbbit-web.pages.dev/";
+import Configs from "./src/configs/configs";
+
+const webUrl = Configs.webUrl;
 const version = "1";
 
 export default function ImageLoader({src}) {
