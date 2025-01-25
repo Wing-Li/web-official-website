@@ -30,7 +30,7 @@ export default function App() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
-          <Image src="/imgs/logo.jpg" alt="" width={28} height={28} />
+          <Image src="/imgs/logo.jpg" alt="" width={28} height={28}/>
           <span className="text-xl font-semibold">NBBIT</span>
         </div>
 
@@ -410,7 +410,7 @@ export default function App() {
                 <MotionLeft className="flex-1">
                   <div className="relative">
                     <img src={milestone.image} alt={milestone.title}
-                      className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+                         className="rounded-lg shadow-lg w-full h-[400px] object-cover"/>
                     <div className="absolute top-4 left-4 bg-indigo-600 text-white px-4 py-2 rounded-full">
                       {milestone.year}
                     </div>
@@ -438,14 +438,18 @@ export default function App() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="max-w-3xl text-white mb-20">
-            <img src="/imgs/img_team.png" alt="" width={629} height={418} className="" />
+            <MotionUp>
+              <img src="/imgs/img_team.png" alt="" width={629} height={418} className=""/>
+            </MotionUp>
 
-            <button
-              className="mt-16 text-white bg-indigo-600 hover:bg-indigo-700 px-14 py-5"
-              onClick={gotoJoin}
-            >
-              Join Us & Earn Now
-            </button>
+            <MotionUp delay={0.25}>
+              <button
+                className="mt-16 text-white bg-indigo-600 hover:bg-indigo-700 px-14 py-5"
+                onClick={gotoJoin}
+              >
+                Join Us & Earn Now
+              </button>
+            </MotionUp>
 
           </div>
         </div>
@@ -461,7 +465,7 @@ export default function App() {
           <div className="flex flex-row justify-between items-start gap-8 mb-12 px-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <Image src="/imgs/logo.jpg" alt="" width={28} height={28} />
+                <Image src="/imgs/logo.jpg" alt="" width={28} height={28}/>
                 <span className="text-xl font-semibold">NBBIT</span>
               </div>
               <p className="max-w-[220px] text-gray-400 mb-4">
@@ -469,7 +473,7 @@ export default function App() {
               </p>
               <div className="flex gap-4">
                 <a href={Configs.tgChannelUrl} target="_blank" rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white">
+                   className="text-gray-400 hover:text-white">
                   <i className="fab fa-telegram text-2xl"></i>
                 </a>
                 {/*<a.tsx href="#" className="text-gray-400 hover:text-white">*/}
