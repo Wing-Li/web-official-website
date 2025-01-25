@@ -21,12 +21,16 @@ export default function App() {
     window.open(Configs.nbbitUrl, '_blank');
   }
 
+  function gotoJoin() {
+    window.open(Configs.tgChannelUrl, '_blank');
+  }
+
 
   const renderNavigation = () => (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
-          <Image src="/imgs/logo.jpg" alt="" width={28} height={28}/>
+          <Image src="/imgs/logo.jpg" alt="" width={28} height={28} />
           <span className="text-xl font-semibold">NBBIT</span>
         </div>
 
@@ -406,7 +410,7 @@ export default function App() {
                 <MotionLeft className="flex-1">
                   <div className="relative">
                     <img src={milestone.image} alt={milestone.title}
-                         className="rounded-lg shadow-lg w-full h-[400px] object-cover"/>
+                      className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
                     <div className="absolute top-4 left-4 bg-indigo-600 text-white px-4 py-2 rounded-full">
                       {milestone.year}
                     </div>
@@ -427,120 +431,26 @@ export default function App() {
   const renderTeam = () => (
     <>
       {/* Team Hero Section */}
-      <div className="relative h-[500px] mt-20">
+      <div className="relative h-dvh mt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url('/imgs/bg_business_team.png')`
+          backgroundImage: `url('/imgs/bg_team_page.jpg')`
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
-          <div className="max-w-3xl text-white">
-            <h1 className="text-5xl font-bold mb-6">Meet Our Experts</h1>
-            <p className="text-xl">Expert traders dedicated to guiding you toward smarter and more successful
-              trades.</p>
+          <div className="max-w-3xl text-white mb-20">
+            <img src="/imgs/img_team.png" alt="" width={629} height={418} className="" />
+
+            <button
+              className="mt-16 text-white bg-indigo-600 hover:bg-indigo-700 px-14 py-5"
+              onClick={gotoJoin}
+            >
+              Join Us & Earn Now
+            </button>
+
           </div>
         </div>
       </div>
-      {/* Leadership Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 text-black">
-          <MotionUp>
-            <h2 className="text-3xl font-bold text-center mb-16">Our Expert Trader Team</h2>
-          </MotionUp>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                "name": "John Wilson",
-                "role": "Binary Options & Forex Expert",
-                "bio": "An expert in forex and binary options trading with 10+ years of experience in technical analysis and strategic insights.",
-                "image": "/imgs/icon_john_wilson.png"
-              },
-              {
-                "name": "Jane Smith",
-                "role": "Crypto & Binary Options Specialist",
-                "bio": "Specializes in cryptocurrency and binary options, blending blockchain knowledge with cutting-edge trading strategies.",
-                "image": "/imgs/icon_jane_smith.jpg"
-              },
-              {
-                "name": "Michael Williams",
-                "role": "Forex & Metals Trading Expert",
-                "bio": "Brings 15 years of expertise in forex and precious metals trading, leveraging macroeconomic trends and market insights.",
-                "image": "/imgs/icon_michael_williams.png"
-              },
-              {
-                "name": "Emily Johnson",
-                "role": "Crypto & HFT Expert",
-                "bio": "A high-frequency trading specialist who combines algorithmic strategies with a.tsx deep understanding of cryptocurrency markets.",
-                "image": "/imgs/icon_emily_johnson.png"
-              },
-              {
-                "name": "David Miller",
-                "role": "Options & Futures Trading Expert",
-                "bio": "Highly skilled in advanced options and futures strategies, with a.tsx focus on risk management, market volatility, and long-term profitability.",
-                "image": "/imgs/icon_david_miller.jpg"
-              },
-              {
-                "name": "Sophia Lee",
-                "role": "Cryptocurrency & Blockchain Expert",
-                "bio": "A blockchain and cryptocurrency expert specializing in tokenomics, DeFi platforms, digital asset trends, and decentralized finance strategies.",
-                "image": "/imgs/icon_sophia_lee.png"
-              },
-              {
-                "name": "Jack Turner",
-                "role": "Commodities & Precious Metals Trader",
-                "bio": "Veteran commodities trader with 18+ years of experience in precious metals and global economic market analysis.",
-                "image": "/imgs/icon_jack_turner.jpg"
-              },
-              {
-                "name": "Mark Davis",
-                "role": "Equity & Stock Index Trading Expert",
-                "bio": "Equity and stock index strategist with 16 years of expertise in market timing and technical analysis for major indices.",
-                "image": "/imgs/icon_mark_davis.png"
-              }
-            ].map((leader, index) => (
-              <MotionUp key={index} className="text-center group relative">
-                <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden">
-                  <img src={leader.image} alt={leader.name} className="w-full h-full object-cover"/>
-                </div>
-                <h3 className="text-xl font-bold mb-2">{leader.name}</h3>
-                <p className="text-indigo-600 font-medium mb-4">{leader.role}</p>
-                <p className="text-gray-600">{leader.bio}</p>
 
-                {/* 悬浮详情框 */}
-                <div
-                  className="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute z-10 w-[320px] bg-white rounded-lg shadow-xl p-6 left-1/2 -translate-x-1/2 top-[200px] mt-4">
-                  <div className="relative">
-                    {/* 顶部小三角 */}
-                    <div
-                      className="absolute -top-8 left-1/2 -translate-x-1/2 border-8 border-transparent border-b-white"></div>
-
-                    <div className="flex items-start gap-4">
-                      <img src={leader.image} alt={leader.name} className="w-20 h-20 rounded-full object-cover"/>
-                      <div className="flex-1 text-left">
-                        <h4 className="text-lg font-bold text-gray-900">{leader.name}</h4>
-                        <p className="text-indigo-600 font-medium text-sm mb-2">{leader.role}</p>
-                      </div>
-                    </div>
-
-                    <div className="mt-4 space-y-3 text-left">
-                      <p className="text-gray-600 text-sm">{leader.bio}</p>
-                      <div className="border-t pt-3">
-                        <h5 className="font-semibold text-gray-900 mb-2">Expertise: </h5>
-                        <div className="flex flex-wrap gap-2">
-                          {leader.role.split('&').map((skill, idx) => (
-                            <span key={idx} className="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded">
-                              {skill.trim()}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </MotionUp>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 
@@ -551,7 +461,7 @@ export default function App() {
           <div className="flex flex-row justify-between items-start gap-8 mb-12 px-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <Image src="/imgs/logo.jpg" alt="" width={28} height={28}/>
+                <Image src="/imgs/logo.jpg" alt="" width={28} height={28} />
                 <span className="text-xl font-semibold">NBBIT</span>
               </div>
               <p className="max-w-[220px] text-gray-400 mb-4">
@@ -559,7 +469,7 @@ export default function App() {
               </p>
               <div className="flex gap-4">
                 <a href={Configs.tgChannelUrl} target="_blank" rel="noopener noreferrer"
-                   className="text-gray-400 hover:text-white">
+                  className="text-gray-400 hover:text-white">
                   <i className="fab fa-telegram text-2xl"></i>
                 </a>
                 {/*<a.tsx href="#" className="text-gray-400 hover:text-white">*/}
