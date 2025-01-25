@@ -5,6 +5,15 @@ const urlsToCache = [
   '/styles.css',
   '/script.js',
   '/logo.jpg',
+  '/imgs/bg_features_top.jpg',
+  '/imgs/img_trading_strategy.png',
+  '/imgs/img_trading_signals.png',
+  '/imgs/img_financial_consultant.png',
+  '/imgs/img_friends_earning_together.png',
+  '/imgs/logo.jpg',
+  'https://cdn.jsdelivr.net/npm/framer-motion@10.11.5/dist/framer-motion.css',
+  'https://cdn.jsdelivr.net/npm/framer-motion@10.11.5/dist/framer-motion.min.js',
+  'https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css',
 ];
 
 // 安装 Service Worker
